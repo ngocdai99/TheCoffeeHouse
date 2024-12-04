@@ -19,5 +19,20 @@ const MyAsyncStorage = {
     }
 }
 
-export default MyAsyncStorage
+// export default MyAsyncStorage
 
+
+
+class asyncStorage {
+
+    static async readData() {
+        try {
+            const jsonValue = await AsyncStorage.getItem(key)
+            return jsonValue != null ? JSON.parse(jsonValue) : defaultValue
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}
+
+export default asyncStorage;

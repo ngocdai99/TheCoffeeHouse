@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import MyAsyncStorage from '../../../utils/MyAsyncStorage';
-import KEY_NAMES from '../../../utils/keyname';
+import MyAsyncStorage from '../../../utils/myAsyncStorage';
+import KEY_NAMES from '../../../constants/keyname';
 
 
 export const loginThunk = createAsyncThunk('user/login', async (loginRequest, { rejectWithValue }) => {
